@@ -1,4 +1,5 @@
 import React from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 // import HornedBeast from './component/HornedBeast';  
 
 class HEDAER extends React.Component{
