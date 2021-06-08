@@ -17,6 +17,15 @@ Actual time needed to complete: _2 hour____
 
 
 
+Number and name of feature: lab3______________________________
+
+Estimate of time needed to complete: __day___
+
+Start time: ____1 pm_
+
+Finish time: __1 am __
+
+Actual time needed to complete: ____
 
 
 

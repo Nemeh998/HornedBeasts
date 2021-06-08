@@ -2,8 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import Overlay from 'react-bootstrap/Overlay'
+import SelectedBeast from  './component/SelectedBeast'
+
   class HornedBeast extends React.Component{
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -22,41 +24,59 @@ import Overlay from 'react-bootstrap/Overlay'
         this.setState({
           clickonbutton: this.state.clickonbutton + 1
     
-        })
-        // this.props.giveMeTuna();
-    
+        }) 
+    }
+      
+   
+
+
+      openModal = () => {
+        this.setState({ modalState: !(this.state.modalState) })
       }
-  
+    
+      closeModal = () => {
+        this.setState({ modalState: false })
+      }
+     
 render() {
-  console.log(this.props);
+   
+
   return (
    
-     <div>
+   
   
-
+<div>
 <Card style={{ width: '18rem' }}>
-  <Card.Img onClick={this.increaseNumberOfPets}variant="top" src={this.props.img} alt={this.props.title}/>
-  <Card.Body>
-    <Card.Title>{this.props.title}</Card.Title>
+<Card.Title>{this.props.title}</Card.Title>
+<Card.Img onClick={this.increaseNumberOfPets}variant="top" src={this.props.img} alt={this.props.alt} title={this.props.title} />
+<Card.Text>{this.props.description}</Card.Text>
+  
     <Card.Text>
     ❤ : {this.state.numberclick}
             </Card.Text>
             <Card.Text>
             😸 Number of Taken Tuna: {this.state.clickonbutton}
             </Card.Text>
-    <Card.Text>
-    {this.props.description}
-    </Card.Text>
     <Button onClick={this.needTuna} variant="primary">Go somewhere</Button>
-  </Card.Body>
+    <Button onClick={this.openModal} >Click here to see as a modal</Button>
+
 </Card>
-
+      <SelectedBeast
+          activeModal={this.state.modalState}
+          closeModal={this.closeModal}
+          title={this.props.title}
+          src={this.props.imageUrl}
+          description={this.props.description}
+          keyword={this.props.keyword}
+        />
     </div>
-    
 
-  )
-          }
-          }
+
+
+);
+
+}}
+
 
 
           export default HornedBeast;
