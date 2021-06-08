@@ -1,3 +1,27 @@
+
+
+
+
+Number and name of feature: __________lab1______________________
+
+Estimate of time needed to complete: __day___
+
+Start time: ____1 am_
+
+Finish time: __1 am in next day___
+
+Actual time needed to complete: _2 hour____
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
