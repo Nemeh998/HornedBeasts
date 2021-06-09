@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
-import HornedBeast from './HornedBeast'; 
+// import HornedBeast from './HornedBeast'; 
 class SelectedBeast extends React.Component{
 
     constructor(props) {
@@ -18,9 +18,9 @@ class SelectedBeast extends React.Component{
             <img src={this.props.img} alt={this.props.keyword} title={this.props.title} style={{ width: '100%' }} />
             
             
-           😸 Number of Taken Tuna: {this.state.clickonbutton}
+           😸 Number of Taken Tuna: {this.props.clickonbutton}
            
-             ❤ : {this.state.numberclick}
+             ❤ : {this.props.numberclick}
             
              <p>{this.props.description}</p>
            </Modal.Body>
