@@ -15,7 +15,7 @@ class SelectedBeast extends React.Component{
          <Modal show={this.props.activeModal}  alt={this.props.title} onHide={this.props.closeModal}>
           <Modal.Title>{this.props.title}</Modal.Title>
           <Modal.Body> 
-            <img src={this.props.img} alt={this.props.keyword} title={this.props.title} style={{ width: '100%' }} />
+            <img src={this.props.src} alt={this.props.keyword} title={this.props.title} style={{ width: '100%' }} />
             
             
            😸 Number of Taken Tuna: {this.props.clickonbutton}
