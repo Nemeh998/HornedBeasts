@@ -2,8 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import SelectedBeast from  './component/SelectedBeast'
-
+// import SelectedBeast from './component/SelectedBeast'
   class HornedBeast extends React.Component{
     
     constructor(props) {
@@ -30,21 +29,18 @@ import SelectedBeast from  './component/SelectedBeast'
    
 
 
-      openModal = () => {
-        this.setState({ modalState: !(this.state.modalState) })
-      }
+      // openModal = () => {
+      //   this.setState({ modalState: !(this.state.modalState) })
+      // }
     
-      closeModal = () => {
-        this.setState({ modalState: false })
-      }
-     
+      // closeModal = () => {
+      //   this.setState({ modalState: false })
+      // }
+  
 render() {
    
 
   return (
-   
-   
-  
 <div>
 <Card style={{ width: '18rem' }}>
 <Card.Title>{this.props.title}</Card.Title>
@@ -61,14 +57,14 @@ render() {
     <Button onClick={this.openModal} >Click here to see as a modal</Button>
 
 </Card>
-      <SelectedBeast
+      {/* <SelectedBeast
           activeModal={this.state.modalState}
           closeModal={this.closeModal}
           title={this.props.title}
           src={this.props.imageUrl}
           description={this.props.description}
           keyword={this.props.keyword}
-        />
+        /> */}
     </div>
 
 
