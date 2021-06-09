@@ -1,24 +1,10 @@
 import React from 'react';  
 import HornedBeast from './HornedBeast'; 
 import Data from './data.json'; 
-import Modal from 'react-bootstrap/Modal'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
   class Main extends React.Component{
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         name: 'Frankie',
-          
-    //         numberOfTunainCabinet: 15
-    //     }
-    // }
-
-    // giveTuna = () => {
-    //     this.setState({
-    //         numberOfTunainCabinet: this.state.numberOfTunainCabinet -1
-    //     })
-    // }
-_______________________________________
-
+   
 
 
 
