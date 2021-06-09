@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
+import HornedBeast from './HornedBeast'; 
 class SelectedBeast extends React.Component{
 
     constructor(props) {
