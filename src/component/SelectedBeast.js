@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
-// import HornedBeast from './HornedBeast'; 
+
 class SelectedBeast extends React.Component{
 
     constructor(props) {
@@ -28,7 +28,7 @@ class SelectedBeast extends React.Component{
             <Button variant="secondary" onClick={this.props.closeModal}>
               Close
                          </Button>  
-        <Button onClick={this.needTuna} variant="primary">Go somewhere</Button>       
+      
            </Modal.Footer>
          </Modal> 
       </div>

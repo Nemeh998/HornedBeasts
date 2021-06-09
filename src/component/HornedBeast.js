@@ -1,8 +1,9 @@
-import React from 'react';  
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import Modal from 'react-bootstrap/Modal'
+// import Modal from 'react-bootstrap/Modal'
+// import Forme from './Forme'
 import SelectedBeast from './SelectedBeast'
   class HornedBeast extends React.Component{
     
@@ -14,13 +15,13 @@ import SelectedBeast from './SelectedBeast'
         }
       }
     
-      increaseNumberOfPets = () => {
+      increaseNumber = () => {
         this.setState({
           numberclick: this.state.numberclick + 1
         })
       }
     
-      needTuna = () => {
+      voit = () => {
         this.setState({
           clickonbutton: this.state.clickonbutton + 1
     
@@ -43,18 +44,20 @@ render() {
 
   return (
 <div>
+
+
 <Card style={{ width: '18rem' }}>
 <Card.Title>{this.props.title}</Card.Title>
-<Card.Img onClick={this.increaseNumberOfPets}variant="top" src={this.props.img} alt={this.props.alt} title={this.props.title} />
+<Card.Img onClick={this.increaseNumber}variant="top" src={this.props.img} alt={this.props.alt} title={this.props.title} />
 <Card.Text>{this.props.description}</Card.Text>
   
     <Card.Text>
     ❤ : {this.state.numberclick}
             </Card.Text>
             <Card.Text>
-            😸 Number of Taken Tuna: {this.state.clickonbutton}
+            😸 Number of voit: {this.state.clickonbutton}
             </Card.Text>
-    <Button onClick={this.needTuna} variant="primary">Go somewhere</Button>
+    <Button onClick={this.voit} variant="primary">Voit</Button>
     <Button onClick={this.openModal} >Click here to see as a modal</Button>
 
 </Card>
@@ -65,7 +68,7 @@ render() {
           src={this.props.img}
           description={this.props.description}
           keyword={this.props.keyword}
-        clickonbutton={this.state.needTuna}
+        clickonbutton={this.state.voit}
         />
     </div>
 
