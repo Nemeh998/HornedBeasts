@@ -1,14 +1,13 @@
 import React from 'react';  
 import HornedBeast from './HornedBeast'; 
 import Data from './data.json'; 
-import Modal from 'react-bootstrap/Modal'
 import SelectedBeast from './SelectedBeast'
   class Main extends React.Component{
     constructor() {
       super();
       this.state = {
         count: 0,
-        hBArray: Data,
+        horandBArray: Data,
         searchHorn: 0,
       }
     }
@@ -22,9 +21,9 @@ import SelectedBeast from './SelectedBeast'
       }
   
       if (this.state.searchHorn) {
-        this.setState({ hBArray: this.state.hBArray.filter(filterBeasts) });
+        this.setState({ horandBArray: this.state.horandBArray.filter(filterBeasts) });
       } else {
-        this.setState({ hBArray: this.state.hBArray });
+        this.setState({ horandBArray: this.state.horandBArray });
       }
     }
   
@@ -55,7 +54,7 @@ return(
      img={beast.image_url}
      description={beast.description}
      keyword={beast.keyword}
-     hBArray={this.state.hBArray}
+     horandBArray={this.state.horandBArray}
      />
    )
  })

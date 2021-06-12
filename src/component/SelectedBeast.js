@@ -10,7 +10,7 @@ class SelectedBeast extends React.Component {
 
   render() {
     return (
-      <div id="SearchHornForm">
+      <div >
         <Form>
           <Form.Label>Filter By Horns</Form.Label>
           <Form.Control onChange={this.props.handleHorns} as="select">
