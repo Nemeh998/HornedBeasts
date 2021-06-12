@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
-// import SelectedBeast from  './component/SelectedBeast'
+
 
   class HornedBeast extends React.Component{
     
@@ -55,21 +55,10 @@ render() {
     <Card.Text>
     ❤ : {this.state.numberclick}
             </Card.Text>
-            {/* <Card.Text>
-          : {this.state.clickonbutton}
-            </Card.Text> */}
-   
-    {/* <Button  >Click here to see as a modal</Button> */}
+       
 
 </Card>
-      {/* <SelectedBeast
-          activeModal={this.state.modalState}
-          closeModal={this.closeModal}
-          title={this.props.title}
-          src={this.props.imageUrl}
-          description={this.props.description}
-          keyword={this.props.keyword}
-        /> */}
+      
 
 <Modal show={this.state.modalState}  alt={this.props.title} onHide={this.closeModal}>
           <Modal.Title>{this.props.title}</Modal.Title>

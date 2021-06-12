@@ -5,11 +5,20 @@ import Footer from './component/Footer';
 
 class App extends React.Component {
 
+
+
+  updateAllBeasrs=(allBeasts)=>{
+
+    this.setState({allBeasts})
+  }
   render() {
     return (
  <div>
  <HEDAER />
-  <Main />
+  <Main 
+  updateAllBeasrs={this.updateAllBeasrs}
+  
+  />
   <Footer />
        </div>
 

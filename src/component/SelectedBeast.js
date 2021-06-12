@@ -1,20 +1,28 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-
-class SelectedBeast extends react.Component{
-
-    constructor(props) {
-        super(props);
-
+import Form from 'react-bootstrap/Form';
+class SelectedBeast extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchHorn: this.props.searchHorn,
     }
-    render(){
-        return (
-<div>
-      
-      </div>
-        )
-}}
+  }
 
+  render() {
+    return (
+      <div id="SearchHornForm">
+        <Form>
+          <Form.Label>Filter By Horns</Form.Label>
+          <Form.Control onChange={this.props.handleHorns} as="select">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>100</option>
+          </Form.Control>
+        </Form>
+      </div>
+    )
+  }
+}
 
 export default SelectedBeast;
