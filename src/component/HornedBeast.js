@@ -1,8 +1,10 @@
-import React from 'react';  
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+
 import Modal from 'react-bootstrap/Modal'
+
 
 
   class HornedBeast extends React.Component{
@@ -15,13 +17,13 @@ import Modal from 'react-bootstrap/Modal'
         }
       }
     
-      increaseNumberOfPets = () => {
+      increaseNumber = () => {
         this.setState({
           numberclick: this.state.numberclick + 1
         })
       }
     
-      needTuna = () => {
+      voit = () => {
         this.setState({
           clickonbutton: this.state.clickonbutton + 1
     
@@ -38,23 +40,25 @@ import Modal from 'react-bootstrap/Modal'
       closeModal = () => {
         this.setState({ modalState: false })
       }
-     
+  
 render() {
    
 
   return (
-   
-   
-  
 <div>
+
 <Card style={{ width: '18rem' }} onClick={this.openModal}>
+
+
+
 <Card.Title>{this.props.title}</Card.Title>
-<Card.Img onClick={this.increaseNumberOfPets}variant="top" src={this.props.img} alt={this.props.alt} title={this.props.title} />
+<Card.Img onClick={this.increaseNumber}variant="top" src={this.props.img} alt={this.props.alt} title={this.props.title} />
 <Card.Text>{this.props.description}</Card.Text>
   
     <Card.Text>
     ❤ : {this.state.numberclick}
             </Card.Text>
+
        
 
 </Card>

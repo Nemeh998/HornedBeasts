@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Form from 'react-bootstrap/Form';
 class SelectedBeast extends React.Component {
   constructor(props) {
@@ -8,10 +9,12 @@ class SelectedBeast extends React.Component {
     }
   }
 
+
   render() {
     return (
       <div >
         <Form>
+
 
           <Form.Label>Filter By Horns</Form.Label>
           <Form.Control onChange={this.props.handleHorns } as="select">
@@ -24,6 +27,7 @@ class SelectedBeast extends React.Component {
             <option value="100">100</option>
           </Form.Control>
         </Form>
+
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React from 'react';  
 import HornedBeast from './HornedBeast'; 
 import Data from './data.json'; 
+
 import SelectedBeast from './SelectedBeast'
   class Main extends React.Component{
     constructor() {
@@ -39,6 +40,7 @@ import SelectedBeast from './SelectedBeast'
 
 
 
+
 render(){
  
   console.log(this.props);  
@@ -52,7 +54,9 @@ return(
 />
 {this.state.hBArray.map(beast => {
    return (
+
     console.log(this.state.hBArray,"the Array number"),
+
      <HornedBeast 
      title={beast.title}
      img={beast.image_url}
@@ -60,6 +64,7 @@ return(
      keyword={beast.keyword}
      horandBArray={this.state.hBArray}
      />
+     </div>
    )
  }
  )
