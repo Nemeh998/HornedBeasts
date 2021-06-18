@@ -7,29 +7,34 @@ import SelectedBeast from './SelectedBeast'
       super();
       this.state = {
         count: 0,
-        horandBArray: Data,
         searchHorn: 0,
+        hBArray: Data,
       }
     }
-  
+
     filterData = () => {
       const filterBeasts = (beast) => {
         if (beast.horns === this.state.searchHorn) {
+          // console.log(beast.horns,"beat");
+          // console.log(Data);
           return true;
         }
         return false;
       }
   
       if (this.state.searchHorn) {
-        this.setState({ horandBArray: this.state.horandBArray.filter(filterBeasts) });
+        this.setState({  hBArray: this.state.hBArray.filter(filterBeasts) });
       } else {
-        this.setState({ horandBArray: this.state.horandBArray });
+        this.setState({ hBArray: this.state.hBArray });
       }
     }
   
     handleHorns = (e) => {
       let searchValue = parseInt(e.target.value);
-      this.setState({ searchHorn: searchValue }, this.filterData);
+    
+      this.setState({ searchHorn: searchValue },
+  
+         this.filterData);
     }
 
 
@@ -45,20 +50,21 @@ return(
 
   handleHorns={this.handleHorns}
 />
-    {
- Data.map((beast)=>{
+{this.state.hBArray.map(beast => {
    return (
-  
+    console.log(this.state.hBArray,"the Array number"),
      <HornedBeast 
      title={beast.title}
      img={beast.image_url}
      description={beast.description}
      keyword={beast.keyword}
-     horandBArray={this.state.horandBArray}
+     horandBArray={this.state.hBArray}
      />
    )
- })
+ }
+ )
 }
+
 </div>
 
 

@@ -12,12 +12,16 @@ class SelectedBeast extends React.Component {
     return (
       <div >
         <Form>
+
           <Form.Label>Filter By Horns</Form.Label>
-          <Form.Control onChange={this.props.handleHorns} as="select">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>100</option>
+          <Form.Control onChange={this.props.handleHorns } as="select">
+            {console.log(this.props.handleHorns)}
+            <option value="0">0</option>
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="100">100</option>
           </Form.Control>
         </Form>
       </div>
