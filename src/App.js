@@ -7,16 +7,16 @@ class App extends React.Component {
 
 
 
-  updateAllBeasrs=(allBeasts)=>{
+  // updateAllBeasrs=(allBeasts)=>{
 
-    this.setState({allBeasts})
-  }
+  //   this.setState({allBeasts})
+  // }
   render() {
     return (
  <div>
  <HEDAER />
   <Main 
-  updateAllBeasrs={this.updateAllBeasrs}
+  // updateAllBeasrs={this.updateAllBeasrs}
   
   />
   <Footer />

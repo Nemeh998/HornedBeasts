@@ -1,7 +1,6 @@
 import React from 'react';  
 import HornedBeast from './HornedBeast'; 
 import Data from './data.json'; 
-
 import SelectedBeast from './SelectedBeast'
   class Main extends React.Component{
     constructor() {
@@ -16,8 +15,7 @@ import SelectedBeast from './SelectedBeast'
     filterData = () => {
       const filterBeasts = (beast) => {
         if (beast.horns === this.state.searchHorn) {
-          // console.log(beast.horns,"beat");
-          // console.log(Data);
+      
           return true;
         }
         return false;
@@ -31,6 +29,7 @@ import SelectedBeast from './SelectedBeast'
     }
   
     handleHorns = (e) => {
+      e.preventDefault()
       let searchValue = parseInt(e.target.value);
     
       this.setState({ searchHorn: searchValue },
@@ -38,13 +37,8 @@ import SelectedBeast from './SelectedBeast'
          this.filterData);
     }
 
-
-
-
 render(){
- 
-  console.log(this.props);  
-  
+
 return(
  
   <div>
@@ -53,10 +47,8 @@ return(
   handleHorns={this.handleHorns}
 />
 {this.state.hBArray.map(beast => {
+  
    return (
-
-    console.log(this.state.hBArray,"the Array number"),
-
      <HornedBeast 
      title={beast.title}
      img={beast.image_url}
@@ -64,7 +56,7 @@ return(
      keyword={beast.keyword}
      horandBArray={this.state.hBArray}
      />
-     </div>
+   
    )
  }
  )
